@@ -1,6 +1,6 @@
 # Media Player App
 
-Welcome to the Media Player App! This project is a native Android application built using Kotlin. The app replicates the YouTube home screen UI and provides a media player to search, view, and interact with videos, similar to YouTube. Users can pause, resume, forward, and watch videos in fullscreen.
+Welcome to the Media Player App! This project is a native Android application built using Kotlin. The app replicates the YouTube home screen UI and provides a media player to search, view, and interact with videos, similar to YouTube. Users can pause, resume, forward, and watch videos in fullscreen. The app uses Supabase DB, which works on PostgreSQL, for storing and retrieving video data.
 
 ## Features
 
@@ -9,11 +9,14 @@ Welcome to the Media Player App! This project is a native Android application bu
 - **Video Playback**: Click on video thumbnails to navigate to a new screen and watch the video.
 - **Playback Controls**: Pause, resume, and forward video playback.
 - **Fullscreen Mode**: Watch videos in fullscreen.
+- **Supabase DB**: Uses Supabase (PostgreSQL) for storing and managing video data.
 
 ## Technologies Used
 
 - **Kotlin**: Programming language for Android development.
 - **Android Studio**: Integrated development environment (IDE) for Android development.
+- **Supabase**: Backend as a Service (BaaS) built on PostgreSQL.
+- **PostgreSQL**: Open-source relational database management system.
 
 ## Installation
 
@@ -29,12 +32,28 @@ Welcome to the Media Player App! This project is a native Android application bu
     - Click on "Open an existing Android Studio project".
     - Navigate to the cloned repository and open it.
 
-3. **Build the project**:
+3. **Set up Supabase**:
+
+    - Sign up at [Supabase](https://supabase.io/).
+    - Create a new project and set up your PostgreSQL database.
+    - Note the API URL and public API key provided by Supabase.
+
+4. **Configure Supabase in the app**:
+
+    - In your project, locate the file where you initialize your database connection.
+    - Add your Supabase API URL and public API key.
+
+    ```kotlin
+    val supabaseUrl = "YOUR_SUPABASE_URL"
+    val supabaseKey = "YOUR_SUPABASE_KEY"
+    ```
+
+5. **Build the project**:
 
     - Click on "Build" in the menu bar.
     - Select "Rebuild Project" to ensure all dependencies are downloaded and the project is set up correctly.
 
-4. **Run the app**:
+6. **Run the app**:
 
     - Connect an Android device or start an emulator.
     - Click on the "Run" button or select "Run" from the menu bar.
