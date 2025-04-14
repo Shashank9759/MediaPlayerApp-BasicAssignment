@@ -40,13 +40,13 @@ class MainActivity : AppCompatActivity() {
 
 
         val supabase = createSupabaseClient(
-            supabaseUrl = "https://munyrniumvvumxrokszg.supabase.co",
-            supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im11bnlybml1bXZ2dW14cm9rc3pnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUyNTU5NjAsImV4cCI6MjAzMDgzMTk2MH0.NFG-_ikStDncluegPlHi9bcZu7MDphwh7jnAwxCgxBQ"
+            supabaseUrl = "https://cxpplsevspgqwhdjtckz.supabase.co",
+            supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4cHBsc2V2c3BncXdoZGp0Y2t6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ2MTc0OTAsImV4cCI6MjA2MDE5MzQ5MH0.neJNYB8_lmNNQbuRExwFmGkgs4c24NCS8mij1QZ_TLY"
         ) {
             this.install(Postgrest)
         }
         CoroutineScope(Dispatchers.IO).launch {
-             users2=supabase.postgrest["user"].select().decodeList<videomodel>()
+             users2=supabase.postgrest["videomodel"].select().decodeList<videomodel>()
             withContext(Dispatchers.Main) {
                adapter.ondatachange(users2)
 
